@@ -3,30 +3,36 @@
         "id":1,
         "name":"Laptop",
         "price":34000,
-        "img":""
+        "img":"/imgs/Laptop.jpg"
     },
     {
         "id":2,
         "name":"Phone",
         "price":14000,
-        "img":""
+        "img":"/imgs/samsung-galaxy.jpg"
     },
     {
         "id":3,
-        "name":"Book",
+        "name":"Computer",
         "price":370,
-        "img":""
+        "img":"/imgs/computer.jpg"
     },
     {
         "id":4,
-        "name":"Fruits",
-        "price":560,
-        "img":""
+        "name":"Book",
+        "price":370,
+        "img":"/imgs/start-with-why.jpg"
     },
     {
         "id":5,
+        "name":"Fruits",
+        "price":560,
+        "img":"/imgs/Chilled-Mixed.jpg"
+    },
+    {
+        "id":6,
         "name":"Vehicle",
         "price":324000,
-        "img":""
+        "img":"/imgs/Tata-Nexon-EV.jpg"
     }
 ]
