@@ -18,7 +18,6 @@ export function Navbar() {
         <Button
           style={{ width: "3.5rem", height: "2.5rem", position: "relative" }}
           variant="outline-primary"
-          className="rounded-circle"
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 1010">
             <path
