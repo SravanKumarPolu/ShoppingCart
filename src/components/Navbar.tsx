@@ -19,11 +19,7 @@ export function Navbar() {
           style={{ width: "3.5rem", height: "2.5rem", position: "relative" }}
           variant="outline-primary"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1010 1010"
-            xml:space="preserve"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 1010">
             <path
               fill="#3BAFDA"
               d="M1010 505c0 278.904-226.106 505-505 505C226.086 1010 0 783.904 0 505S226.086 0 505 0c278.894 0 505 226.096 505 505z"
