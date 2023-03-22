@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"Laptop",
+        "price":34000,
+        "img":""
+    },
+    {
+        "id":2,
+        "name":"Phone",
+        "price":14000,
+        "img":""
+    },
+    {
+        "id":3,
+        "name":"Book",
+        "price":370,
+        "img":""
+    },
+    {
+        "id":4,
+        "name":"Fruits",
+        "price":560,
+        "img":""
+    },
+    {
+        "id":5,
+        "name":"Vehicle",
+        "price":324000,
+        "img":""
+    }
+]
