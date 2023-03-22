@@ -9,7 +9,7 @@ export function Store() {
         {storeItems.map((item) => (
           //   <Col className="p-4">{JSON.stringify(item)}</Col>
           <Col key={item.id}>
-            <StoreItem {...item} />
+            <StoreItem imgUrl={""} {...item} />
           </Col>
         ))}
       </Row>
