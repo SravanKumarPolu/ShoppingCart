@@ -16,6 +16,12 @@ export function StoreItem({ id, name, price, img }: StoreItemProps) {
           height="200px"
           style={{ objectFit: "cover" }}
         />
+        <Card.Body className=" d-flex flex-column">
+          <Card.Title className="d-flex justify-content-between align-items-baseline md-4">
+            <span className="fs-2">{name}</span>
+            <span className="m-2 text-muted">{price}</span>
+          </Card.Title>
+        </Card.Body>
       </Card>
     </>
   );
