@@ -25,7 +25,9 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
           </Card.Title>
           <div className="mt-auto">
             {quantity === 0 ? (
-              <Button className="w-100">+Add To Cart</Button>
+              <Button className="w-100 border border-warning">
+                +Add To Cart
+              </Button>
             ) : null}
           </div>
         </Card.Body>
