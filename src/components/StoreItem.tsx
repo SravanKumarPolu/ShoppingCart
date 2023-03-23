@@ -6,13 +6,13 @@ type StoreItemProps = {
   price: number;
   imgUrl: string;
 };
-export function StoreItem({ id, name, price, img }: StoreItemProps) {
+export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   return (
     <>
       <Card>
         <Card.Img
           variant="top"
-          src={img}
+          src={imgUrl}
           height="200px"
           style={{ objectFit: "cover" }}
         />

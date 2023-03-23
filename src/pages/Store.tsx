@@ -1,5 +1,6 @@
 import { Col, Row } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
+
 import storeItems from "../data/items.json";
 export function Store() {
   return (
@@ -9,7 +10,7 @@ export function Store() {
         {storeItems.map((item) => (
           //   <Col className="p-4">{JSON.stringify(item)}</Col>
           <Col key={item.id}>
-            <StoreItem imgUrl={""} {...item} />
+            <StoreItem {...item} />
           </Col>
         ))}
       </Row>
