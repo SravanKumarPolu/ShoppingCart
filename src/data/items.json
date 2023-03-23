@@ -1,25 +1,25 @@
 [
     {
         "id":1,
-        "name":"Laptop",
+        "name":"Laptops",
         "price":34000,
         "imgUrl":"/imgs/Laptop.jpg"
     },
     {
         "id":2,
-        "name":"Phone",
+        "name":"Phones",
         "price":14000,
         "imgUrl":"/imgs/samsung-galaxy.jpg"
     },
     {
         "id":3,
-        "name":"Computer",
+        "name":"Computers",
         "price":10370,
         "imgUrl":"/imgs/computer.jpg"
     },
     {
         "id":4,
-        "name":"Book",
+        "name":"Books",
         "price":370,
         "imgUrl":"/imgs/start-with-why.jpg"
     },
@@ -31,7 +31,7 @@
     },
     {
         "id":6,
-        "name":"Vehicle",
+        "name":"Vehicles",
         "price":524000,
         "imgUrl":"/imgs/Tata-Nexon-EV.jpg"
     }
