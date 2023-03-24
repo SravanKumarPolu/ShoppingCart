@@ -75,7 +75,7 @@ export function Navbar() {
             </div>
           </Button>
         )}
-        Hi
+        <span className="text-warning">Hi</span>
       </Container>
     </NavbarBs>
   );
