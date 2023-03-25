@@ -17,7 +17,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         <Offcanvas.Title>
           {" "}
           Cart
-          <Offcanvas.Body>{cartQuantity}</Offcanvas.Body>
+          <Offcanvas.Body className="text-info">{cartQuantity}</Offcanvas.Body>
         </Offcanvas.Title>
       </Offcanvas.Header>
     </Offcanvas>
