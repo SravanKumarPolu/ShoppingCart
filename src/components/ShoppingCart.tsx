@@ -1,5 +1,5 @@
 import { Children } from "react";
-import { Offcanvas } from "react-bootstrap";
+import { Offcanvas, Stack } from "react-bootstrap";
 import {
   ShoppingCartProvider,
   useShoppingCart,
@@ -17,7 +17,10 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         <Offcanvas.Title>
           {" "}
           Cart
-          <Offcanvas.Body className="text-info">{cartQuantity}</Offcanvas.Body>
+          <Offcanvas.Body className="text-info">
+            {cartQuantity}
+            <Stack gap={2}>{cartItems}</Stack>
+          </Offcanvas.Body>
         </Offcanvas.Title>
       </Offcanvas.Header>
     </Offcanvas>
