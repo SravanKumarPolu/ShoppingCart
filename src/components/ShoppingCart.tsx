@@ -4,12 +4,13 @@ import {
   ShoppingCartProvider,
   useShoppingCart,
 } from "../context/ShoppingCartContext";
+import { CartItem, cartItems } from "./CartItem";
 
 type ShoppingCartProps = {
   isOpen: boolean;
 };
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
-  const { closeCart } = useShoppingCart();
+  const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -19,7 +20,11 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           Cart
           <Offcanvas.Body className="text-info">
             {cartQuantity}
-            <Stack gap={2}>{cartItems}</Stack>
+            <Stack gap={2}>
+              {cartItems.map((item) => (
+                <CartItem key={item.id} {...item} />
+              ))}
+            </Stack>
           </Offcanvas.Body>
         </Offcanvas.Title>
       </Offcanvas.Header>
