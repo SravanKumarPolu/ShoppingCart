@@ -13,7 +13,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item == null) return null;
   return (
     <Stack direction="horizontal" gap={2}>
-      <img src={item.imgUrl} style={{ width: "34px", height: "35px" }}></img>
+      <img src={item.imgUrl} style={{ width: "44px", height: "45px" }}></img>
     </Stack>
   );
 }
