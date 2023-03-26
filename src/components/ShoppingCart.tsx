@@ -23,7 +23,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           <div className="d-flex justify-content-between ">
             {" "}
             Cart:
-            <span className=" fs-2 text-info position-absolute  end-50 ">
+            <span className=" fs-3 text-info position-absolute  end-50 ">
               {cartQuantity}
             </span>
           </div>
