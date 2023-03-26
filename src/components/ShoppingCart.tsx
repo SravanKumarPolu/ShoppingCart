@@ -14,20 +14,28 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title>
-          {" "}
-          Cart
-          <Offcanvas.Body className="text-info">
-            {cartQuantity}
-            <Stack gap={2}>
-              {cartItems.map((item) => (
-                <CartItem key={item.id} {...item} />
-              ))}
-            </Stack>
-          </Offcanvas.Body>
-        </Offcanvas.Title>
-      </Offcanvas.Header>
+      <Offcanvas.Header
+        closeButton
+        className="position-absolute end-0"
+      ></Offcanvas.Header>
+      <Offcanvas.Title>
+        <div className="d-flex flex-row">
+          <div className="d-flex justify-content-between ">
+            {" "}
+            Cart:
+            <span className="text-info position-absolute  end-50">
+              {cartQuantity}
+            </span>
+          </div>
+        </div>
+        <Offcanvas.Body>
+          <Stack gap={2}>
+            {cartItems.map((item) => (
+              <CartItem key={item.id} {...item} />
+            ))}
+          </Stack>
+        </Offcanvas.Body>
+      </Offcanvas.Title>
     </Offcanvas>
   );
 }
