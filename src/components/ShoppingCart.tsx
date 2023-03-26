@@ -4,7 +4,7 @@ import {
   ShoppingCartProvider,
   useShoppingCart,
 } from "../context/ShoppingCartContext";
-import { CartItem, cartItems } from "./CartItem";
+import { CartItem } from "./CartItem";
 
 type ShoppingCartProps = {
   isOpen: boolean;
