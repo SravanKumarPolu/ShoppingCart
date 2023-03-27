@@ -19,11 +19,23 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
     <Stack
       direction="horizontal"
       gap={2}
-      className="d-flex justify-content-between"
+      className="d-flex align-items-center justify-content-between"
     >
-      <img src={item.imgUrl} style={{ width: "64px", height: "65px" }}></img>
+      <img
+        src={item.imgUrl}
+        style={{ width: "64px", height: "65px", objectFit: "cover" }}
+      ></img>
 
-      <div>{item.name}</div>
+      <div className="me-atuo">
+        <div>
+          {item.name}
+          {quantity > 1 && (
+            <span className="text-muted p-1 " style={{ fontSize: "15px" }}>
+              x{quantity}
+            </span>
+          )}
+        </div>
+      </div>
       <div className="m-2 text-muted">{formatCurrency(item.price)}</div>
     </Stack>
   );
