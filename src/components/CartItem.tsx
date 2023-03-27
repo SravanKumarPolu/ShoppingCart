@@ -5,10 +5,11 @@ import storeItems from "../data/items.json";
 type CartItemProps = {
   id: number;
   name: string;
+  price: number;
   quantity: number;
 };
 
-export function CartItem({ id, quantity, name }: CartItemProps) {
+export function CartItem({ id, quantity, name, price }: CartItemProps) {
   const { removeFromCart } = useShoppingCart();
   const item = storeItems.find((i) => i.id === id);
 
@@ -21,6 +22,7 @@ export function CartItem({ id, quantity, name }: CartItemProps) {
     >
       <img src={item.imgUrl} style={{ width: "64px", height: "65px" }}></img>
       <div>{item.name}</div>
+      <div>{item.price}</div>
     </Stack>
   );
 }
