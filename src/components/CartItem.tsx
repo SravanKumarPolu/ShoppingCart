@@ -35,8 +35,13 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
             </span>
           )}
         </div>
+        <div className="s-2 text-muted" style={{ fontSize: "10px" }}>
+          {formatCurrency(item.price)}
+        </div>
       </div>
-      <div className="m-2 text-muted">{formatCurrency(item.price)}</div>
+      <div className="s-2 text-muted" style={{ fontSize: "10px" }}>
+        {formatCurrency(item.price * quantity)}
+      </div>
     </Stack>
   );
 }
