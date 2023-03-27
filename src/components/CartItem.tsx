@@ -26,7 +26,7 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
         style={{ width: "64px", height: "65px", objectFit: "cover" }}
       ></img>
 
-      <div className="me-atuo">
+      <div className="me-atuod-flex align-items-center ">
         <div>
           {item.name}
           {quantity > 1 && (
@@ -39,7 +39,7 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
           {formatCurrency(item.price)}
         </div>
       </div>
-      <div className="s-2 text-muted" style={{ fontSize: "10px" }}>
+      <div className="s-2 text-muted">
         {formatCurrency(item.price * quantity)}
       </div>
     </Stack>
