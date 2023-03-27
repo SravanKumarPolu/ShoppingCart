@@ -22,6 +22,7 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
       className="d-flex justify-content-between"
     >
       <img src={item.imgUrl} style={{ width: "64px", height: "65px" }}></img>
+
       <div>{item.name}</div>
       <div className="m-2 text-muted">{formatCurrency(item.price)}</div>
     </Stack>
