@@ -4,6 +4,7 @@ import {
   ShoppingCartProvider,
   useShoppingCart,
 } from "../context/ShoppingCartContext";
+import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
 
 type ShoppingCartProps = {

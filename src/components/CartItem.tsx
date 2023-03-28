@@ -12,6 +12,7 @@ type CartItemProps = {
 
 export function CartItem({ id, quantity, name, price }: CartItemProps) {
   const { removeFromCart } = useShoppingCart();
+
   const item = storeItems.find((i) => i.id === id);
 
   if (item == null) return null;
@@ -44,10 +45,6 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
           {formatCurrency(item.price * quantity)}
         </div>
       </Stack>
-      <div className="s-2 text-muted">
-        Total:
-        {formatCurrency((item.price += item.price))}
-      </div>
     </>
   );
 }
