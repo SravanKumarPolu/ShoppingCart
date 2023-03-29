@@ -1,7 +1,9 @@
-import { Button } from "react-bootstrap";
-import Chart from "../components/Chart";
-import chart from "../components/Chart";
+import Chart from "../charts/Chart";
 
 export function About() {
-  return <Chart />;
+  return (
+    <>
+      <Chart />;
+    </>
+  );
 }
