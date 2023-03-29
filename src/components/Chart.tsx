@@ -1,4 +1,5 @@
-import { Bar, BarChart, XAxis, YAxis } from "recharts";
+import React from "react";
+import { BarChart, Bar, XAxis, YAxis } from "recharts";
 
 const data = [
   {
@@ -18,11 +19,8 @@ const data = [
     value: 29,
   },
 ];
-type Data = {
-  name: "string";
-  value: number;
-};
-export default function Chart() {
+
+export default function chart() {
   return (
     <BarChart width={359} height={280} data={data}>
       <XAxis dataKey="name" />
