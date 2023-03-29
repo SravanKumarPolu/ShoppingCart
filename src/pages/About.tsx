@@ -1,3 +1,6 @@
-export function About(){
-    return <h1>About</h1>
+import { Button } from "react-bootstrap";
+import Chart from "../components/Chart";
+
+export function About() {
+  return <Chart />;
 }
