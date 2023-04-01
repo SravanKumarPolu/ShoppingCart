@@ -2,7 +2,7 @@ import { Children } from "react";
 import { Button, Offcanvas, Stack } from "react-bootstrap";
 
 import { formatCurrency } from "../utilities/formatCurrency";
-import { CartItem } from "./CartItem";
+
 import { useShoppingCartChart } from "../context/ShoppingCartContextChart";
 import { CartItemChart } from "./CartItemChart";
 
@@ -12,7 +12,7 @@ type ShoppingCartChartProps = {
 export function ShoppingCartChart({ isOpen }: ShoppingCartChartProps) {
   const { closeCartChart, cartItems } = useShoppingCartChart();
   const { openCartChart, cartQuantitys } = useShoppingCartChart();
-
+  console.log(cartQuantitys);
   return (
     <Offcanvas show={isOpen} onHide={closeCartChart} placement="end">
       <Offcanvas.Header

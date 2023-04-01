@@ -4,8 +4,10 @@ import {
   ShoppingCartProvider,
   useShoppingCart,
 } from "../context/ShoppingCartContext";
+import { ShoppingCartChart } from "../components/ShoppingCartChart";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
+import { useShoppingCartChart } from "../context/ShoppingCartContextChart";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -13,6 +15,7 @@ type ShoppingCartProps = {
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();
+  const { openCartChart, cartQuantitys } = useShoppingCartChart();
 
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
@@ -25,7 +28,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           <div className="d-flex justify-content-between ">
             {" "}
             Cart:
-            {cartQuantity}
+            <div>{cartQuantity}</div>
           </div>
         </div>
         <Offcanvas.Body>

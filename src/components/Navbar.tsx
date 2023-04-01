@@ -4,7 +4,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { useShoppingCartChart } from "../context/ShoppingCartContextChart";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
-  const { openCartChart, cartQuantityChart } = useShoppingCartChart();
+  const { openCartChart, cartQuantitys } = useShoppingCartChart();
   return (
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
@@ -18,7 +18,7 @@ export function Navbar() {
 
           <Nav.Link to="/about" as={NavLink}>
             <span>About</span>
-            {cartQuantity > 0 && <div>{cartQuantity}</div>}
+            {cartQuantitys > 0 && <div>{cartQuantitys}</div>}
           </Nav.Link>
         </Nav>
 
@@ -80,21 +80,8 @@ export function Navbar() {
             </div>
           </Button>
         )}
-        <span className="text-warning">
-          {cartQuantity > 0 && (
-            <Button
-              onClick={openCartChart}
-              style={{
-                width: "3.5rem",
-                height: "2.5rem",
-                position: "relative",
-              }}
-              variant="outline-primary"
-            >
-              <h3>Hi</h3>
-            </Button>
-          )}
-        </span>
+
+        <h3 className="text-warning">Hi</h3>
       </Container>
     </NavbarBs>
   );
