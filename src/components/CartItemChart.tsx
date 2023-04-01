@@ -1,8 +1,8 @@
+import { Button, Stack } from "react-bootstrap";
 import { Bar, BarChart, XAxis, YAxis } from "recharts";
-import { useShoppingCart } from "../context/ShoppingCartContextChart";
 import storeItems from "../data/items.json";
 import { formatCurrency } from "../utilities/formatCurrency";
-import { Children } from "react";
+import { useShoppingCartChart } from "../context/ShoppingCartContextChart";
 
 type CartItemChartProps = {
   id: number;
@@ -16,19 +16,29 @@ export function CartItemChart({
   quantity,
   name,
   price,
-}: CartItemChartProps): JSX.Element {
-  const { removeFromCart } = useShoppingCart();
+}: CartItemChartProps) {
+  const { removeFromCart } = useShoppingCartChart();
 
   const item = storeItems.find((i) => i.id === id);
 
+  if (item == null) return null;
   return (
     <>
-      {quantity}
-      <BarChart width={259} height={180} data={[item]}>
-        <XAxis dataKey={name} />
-        <YAxis />
-        <Bar dataKey={price} fill="#8884d8" />
-      </BarChart>
+      <Stack>
+        <h2>
+          {quantity > 1 && (
+            <span className="text-muted p-1 " style={{ fontSize: "15px" }}>
+              x{quantity}
+            </span>
+          )}
+        </h2>
+
+        <BarChart width={259} height={180} data={[item]}>
+          <XAxis dataKey={name} />
+          <YAxis />
+          <Bar dataKey={price} fill="#8884d8" />
+        </BarChart>
+      </Stack>
     </>
   );
 }

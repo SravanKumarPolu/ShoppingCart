@@ -1,5 +1,5 @@
 import { Children } from "react";
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Button, Offcanvas, Stack } from "react-bootstrap";
 import {
   ShoppingCartProvider,
   useShoppingCart,
@@ -13,6 +13,7 @@ type ShoppingCartProps = {
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();
+
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header
@@ -24,9 +25,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           <div className="d-flex justify-content-between ">
             {" "}
             Cart:
-            <span className=" fs-3 text-info position-absolute  end-50 ">
-              {cartQuantity}
-            </span>
+            {cartQuantity}
           </div>
         </div>
         <Offcanvas.Body>
