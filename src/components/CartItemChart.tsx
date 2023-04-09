@@ -47,11 +47,6 @@ export function CartItemChart({
           {formatCurrency(item.price * quantity)}
         </div>
       </Stack>
-      <BarChart width={259} height={180} data={[item]}>
-        <XAxis dataKey={quantity} />
-        <YAxis />
-        <Bar dataKey={price} fill="#8884d8" />
-      </BarChart>
     </>
   );
 }

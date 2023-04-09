@@ -39,10 +39,10 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             </Stack>
           </Offcanvas.Body>
         </Offcanvas.Title>
-        {cartItems.map((item) => (
-          <CartItemChart name={""} price={0} key={item.id} {...item} />
-        ))}
       </Offcanvas>
+      {cartItems.map((item) => (
+        <CartItemChart name={""} price={0} key={item.id} {...item} />
+      ))}
     </>
   );
 }

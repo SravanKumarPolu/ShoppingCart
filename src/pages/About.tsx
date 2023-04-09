@@ -15,7 +15,7 @@ export function About() {
   return (
     <>
       <CartItemChart name={""} price={0} id={0} quantity={0} />
-      <div className="d-flex flex-row ">
+      <div className="d-flex flex-row  ">
         <button onClick={onIncrement} className="  btn btn-primary  p-2 m-4 ">
           Increment
         </button>
