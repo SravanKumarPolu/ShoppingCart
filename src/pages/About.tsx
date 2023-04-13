@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Chart from "../charts/Chart";
-import { CartItemChart } from "../components/CartItemChart";
 
 export function About() {
   const [count, setCount] = useState(0);

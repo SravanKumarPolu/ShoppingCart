@@ -7,7 +7,6 @@ import {
 
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
-import { CartItemChart } from "./CartItemChart";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -24,7 +23,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           className="position-absolute end-0"
         ></Offcanvas.Header>
         <Offcanvas.Title>
-          <div className="d-flex flex-row">
+          <div className="d-flex flex-row ">
             <div className="d-flex justify-content-between ">
               {" "}
               Cart:
@@ -40,9 +39,6 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
           </Offcanvas.Body>
         </Offcanvas.Title>
       </Offcanvas>
-      {cartItems.map((item) => (
-        <CartItemChart name={""} price={0} key={item.id} {...item} />
-      ))}
     </>
   );
 }
