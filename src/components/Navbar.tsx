@@ -63,7 +63,7 @@ export function Navbar() {
               d="M688.635 772.363h-367.27c-25.683 0-47.807-19.193-51.466-44.64l-36.75-257.304c-.415-2.9.453-5.839 2.367-8.048a10.12 10.12 0 0 1 7.633-3.482h523.702a10.12 10.12 0 0 1 7.633 3.482 10.115 10.115 0 0 1 2.368 8.048l-36.77 257.304c-3.63 25.447-25.744 44.64-51.447 44.64zM254.798 479.09l35.103 245.773c2.23 15.565 15.762 27.302 31.464 27.302h367.27c15.712 0 29.224-11.737 31.444-27.292l35.123-245.783H254.798z"
             />
           </svg>
-          <div>{cartQuantity === 0 && <h6>Add items</h6>}</div>;
+          <div>{cartQuantity === 0 && <h6>Add items</h6>}</div>
           {cartQuantity > 0 && (
             <div
               className="rounded-circle bg-success d-flex justify-content-center align-items-center"
