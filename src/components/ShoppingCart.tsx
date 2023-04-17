@@ -27,7 +27,16 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             <div className="d-flex justify-content-between ">
               {" "}
               Cart:
-              <div>{cartQuantity}</div>
+              <div>
+                {cartQuantity}
+                <div>
+                  {cartQuantity === 0 && (
+                    <h6 className="text-danger text-aglign-center">
+                      No items,Please Add items
+                    </h6>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
           <Offcanvas.Body>
