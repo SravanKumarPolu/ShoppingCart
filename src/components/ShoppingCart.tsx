@@ -24,22 +24,34 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         ></Offcanvas.Header>
         <Offcanvas.Title>
           <div className="d-flex flex-row ">
-            <div className="d-flex justify-content-between ">
+            <div className="d-flex justify-content-between align-item-center">
               {" "}
               Cart:
               <div>
-                {cartQuantity}
+                {cartQuantity > 0 && <div>{cartQuantity}</div>}
                 <div>
                   {cartQuantity === 0 && (
-                    <h6 className="text-danger text-aglign-center">
-                      No items,Please Add items
-                    </h6>
+                    <h5 className="d-flex text-warning p-2 ms-4">
+                      <span>
+                        {" "}
+                        <strong>Your cart is empty.</strong>
+                      </span>
+                    </h5>
                   )}
                 </div>
               </div>
             </div>
           </div>
           <Offcanvas.Body>
+            {cartQuantity === 0 && (
+              <h6 className="d-flex  text-success  p-2 ms-4">
+                <span>
+                  <small>
+                    <p>"please visite 'Store' pageTo add items."</p>
+                  </small>
+                </span>
+              </h6>
+            )}
             <Stack gap={2}>
               {cartItems.map((item) => (
                 <CartItem name={""} price={0} key={item.id} {...item} />
