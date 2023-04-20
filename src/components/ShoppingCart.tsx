@@ -47,7 +47,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
               <h6 className="d-flex  text-success  p-2 ms-4">
                 <span>
                   <small>
-                    <p>"please visite 'Store' pageTo add items."</p>
+                    <p>"Please visit 'Store' page to add items."</p>
                   </small>
                 </span>
               </h6>

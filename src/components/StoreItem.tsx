@@ -68,7 +68,6 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 <Button
                   className="border border-success  "
                   variant="danger"
-                  size="sm"
                   onClick={() => removeFromCart(id)}
                 >
                   Remove
