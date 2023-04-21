@@ -18,6 +18,7 @@ export function CartItem({ id, quantity, name, price }: CartItemProps) {
   const item = storeItems.find((i) => i.id === id);
 
   if (item == null) return null;
+
   console.log(item.name);
   return (
     <>
