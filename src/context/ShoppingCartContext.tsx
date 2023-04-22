@@ -6,6 +6,7 @@ type ShoppingCartProviderProps = {
   children: ReactNode;
 };
 type CartItem = {
+  [x: string]: number;
   id: number;
   quantity: number;
 };
@@ -17,6 +18,7 @@ type ShoppingCartContext = {
   decreaseCartQuantity: (id: number) => void;
   removeFromCart: (id: number) => void;
   cartQuantity: number;
+
   cartItems: CartItem[];
 };
 

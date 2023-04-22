@@ -7,10 +7,12 @@ import {
 
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
+import CartTotal from "./CartTotal";
 
 type ShoppingCartProps = {
   isOpen: boolean;
 };
+
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();

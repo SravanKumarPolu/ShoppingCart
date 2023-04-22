@@ -66,9 +66,9 @@ export function Navbar() {
           <div>
             {cartQuantity === 0 && (
               <div
-                className="d-flex justify-content-center align-items-center rounded-circle   text-danger "
+                className="d-flex justify-content-center align-items-center rounded-circle   text-white "
                 style={{
-                  background: "gold",
+                  background: "red",
                   width: "1.1rem",
                   height: "1.1rem",
                   position: "absolute",
