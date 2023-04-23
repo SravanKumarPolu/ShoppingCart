@@ -34,7 +34,9 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                       <h5 className="d-flex   ms-4"> Cart:</h5>
 
                       <div className="d-flex text-warning  me-5 ms-5 ps-5">
-                        {cartQuantity}
+                        <strong>
+                          <h4>{cartQuantity}</h4>
+                        </strong>
                       </div>
                     </div>
                   )}
