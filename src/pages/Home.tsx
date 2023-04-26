@@ -1,5 +1,4 @@
 import Chart from "../charts/Chart";
-import { useState } from "react";
 
 export function Home() {
   return (
