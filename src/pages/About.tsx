@@ -1,6 +1,20 @@
 import { useState } from "react";
 
+import { BarChart, Bar, XAxis, YAxis } from "recharts";
+
+import storeItems from "../data/items.json";
+import { CartItem } from "../components/CartItem";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 export function About() {
+  const { closeCart, cartItems } = useShoppingCart();
+  const { openCart, cartQuantity } = useShoppingCart();
+  const cartChart = (
+    <BarChart width={359} height={280} data={cartItems}>
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Bar dataKey="quantity" fill="#8884d8" />
+    </BarChart>
+  );
   const [count, setCount] = useState(0);
   const onIncrement = () => {
     setCount(count + 1);
@@ -21,6 +35,8 @@ export function About() {
           Dcrement{" "}
         </button>
       </div>
+
+      <div className="ms-auto fw-bold fs-5">{cartChart}</div>
     </>
   );
 }

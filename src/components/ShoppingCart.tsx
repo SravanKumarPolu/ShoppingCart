@@ -8,6 +8,8 @@ import {
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
 import storeItems from "../data/items.json";
+import { BarChart, Bar, XAxis, YAxis } from "recharts";
+
 type ShoppingCartProps = {
   isOpen: boolean;
 };
@@ -15,6 +17,13 @@ type ShoppingCartProps = {
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();
+  const cartChart = (
+    <BarChart width={359} height={280} data={cartItems}>
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Bar dataKey="quantity" fill="#8884d8" />
+    </BarChart>
+  );
 
   return (
     <>
@@ -72,6 +81,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                     }, 0)
                   )}
                 </div>
+                <div className="ms-auto fw-bold fs-5">{cartChart}</div>
               </Stack>
             </Offcanvas.Body>
           </Offcanvas.Title>
