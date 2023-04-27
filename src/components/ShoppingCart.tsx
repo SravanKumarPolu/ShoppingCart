@@ -81,7 +81,14 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                     }, 0)
                   )}
                 </div>
-                <div className="ms-auto fw-bold fs-5">{cartChart}</div>
+                <div
+                  className="ms-auto fw-bold fs-5"
+                  style={{
+                    border: "1.5px solid gold",
+                  }}
+                >
+                  {cartChart}
+                </div>
               </Stack>
             </Offcanvas.Body>
           </Offcanvas.Title>
