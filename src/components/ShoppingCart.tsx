@@ -8,7 +8,7 @@ import {
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
 import storeItems from "../data/items.json";
-import { BarChart, Bar, XAxis, YAxis } from "recharts";
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis } from "recharts";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -84,6 +84,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                 <div
                   className="ms-auto fw-bold fs-5"
                   style={{
+                    background: "linear-gradient( to right,palegreen, pink )",
                     border: "1.5px solid gold",
                   }}
                 >

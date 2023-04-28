@@ -5,9 +5,11 @@ import { BarChart, Bar, XAxis, YAxis } from "recharts";
 import storeItems from "../data/items.json";
 import { CartItem } from "../components/CartItem";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+
 export function About() {
   const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();
+
   const cartChart = (
     <BarChart width={359} height={280} data={cartItems}>
       <XAxis dataKey="name" />
