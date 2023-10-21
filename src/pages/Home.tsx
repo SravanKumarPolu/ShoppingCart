@@ -21,7 +21,15 @@ export function Home() {
       >
         <Chart />
       </div>
-      <div className="ms-auto fw-bold fs-5">{cartChart}</div>
+      <div
+        className="ms-auto "
+        style={{
+          background: "linear-gradient( to right,palegreen, pink )",
+          border: "1.5px solid gold",
+        }}
+      >
+        <div className="ms-auto fw-bold fs-5">{cartChart}</div>
+      </div>
     </>
   );
 }
