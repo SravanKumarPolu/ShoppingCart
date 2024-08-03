@@ -8,7 +8,6 @@ import {
 import { formatCurrency } from "../utilities/formatCurrency";
 import { CartItem } from "./CartItem";
 import storeItems from "../data/items.json";
-import { LineChart, Line, BarChart, Bar, XAxis, YAxis } from "recharts";
 
 type ShoppingCartProps = {
   isOpen: boolean;
@@ -17,13 +16,6 @@ type ShoppingCartProps = {
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
   const { closeCart, cartItems } = useShoppingCart();
   const { openCart, cartQuantity } = useShoppingCart();
-  const cartChart = (
-    <BarChart width={359} height={280} data={cartItems}>
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Bar dataKey="quantity" fill="#8884d8" />
-    </BarChart>
-  );
 
   return (
     <>
@@ -31,8 +23,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
         <Offcanvas show={isOpen} onHide={closeCart} placement="end">
           <Offcanvas.Header
             closeButton
-            className="position-absolute end-0"
-          ></Offcanvas.Header>
+            className="position-absolute end-0"></Offcanvas.Header>
           <Offcanvas.Title>
             <div className="d-flex flex-row ">
               <div className="d-flex justify-content-between align-item-center">
@@ -86,10 +77,7 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
                   style={{
                     background: "linear-gradient( to right,palegreen, pink )",
                     border: "1.5px solid gold",
-                  }}
-                >
-                  {cartChart}
-                </div>
+                  }}></div>
               </Stack>
             </Offcanvas.Body>
           </Offcanvas.Title>
