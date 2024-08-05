@@ -1,11 +1,11 @@
-import Chart from "../charts/Chart";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import iphone from "../assets/IPhone.png";
 import car from "../assets/TATACar.png";
 import fruits from "../assets/Fruits.png";
 import computer from "../assets/Computer.png";
+
 export function Home() {
-  const { closeCart, cartItems, openCart, cartQuantity } = useShoppingCart();
+  const { closeCart, openCart } = useShoppingCart();
 
   return (
     <>
@@ -16,63 +16,104 @@ export function Home() {
           borderRadius: "10px",
           textAlign: "center",
         }}>
-        <span className=" p-2">
+        <span className="p-2">
           <h1 className="text-black p-4">Welcome to Our Shop!</h1>
           <p>Find the best products at unbeatable prices!</p>
         </span>
-        <div className="row">
-          <div className="col-md-6">
-            <img
-              src={car}
-              alt="TATA Car"
+        <div className="row wrap">
+          <a
+            className="carousel-control-prev "
+            href="#imageCarousel"
+            role="button"
+            data-slide="prev">
+            <span
               style={{
-                width: "100%",
-                height: "300px",
                 objectFit: "cover",
-                borderRadius: "10px",
+                borderRadius: "5px",
                 marginBottom: "20px",
+
+                height: "100px",
               }}
-            />
+              className="carousel-control-prev-icon bg-primary p-4"
+              aria-hidden="true"></span>
+            <span className="sr-only ">Previous</span>
+          </a>
+          <div
+            id="imageCarousel"
+            className="carousel slide row"
+            data-ride="carousel">
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img
+                  src={car}
+                  alt="TATA Car"
+                  className="d-block w-100"
+                  style={{
+                    height: "400px",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "20px",
+                  }}
+                />
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={iphone}
+                  alt="IPhone"
+                  className="d-block w-100"
+                  style={{
+                    height: "400px",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "20px",
+                  }}
+                />
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={fruits}
+                  alt="Fruits"
+                  className="d-block w-100"
+                  style={{
+                    height: "400px",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "20px",
+                  }}
+                />
+              </div>
+              <div className="carousel-item">
+                <img
+                  src={computer}
+                  alt="Computer"
+                  className="d-block w-100"
+                  style={{
+                    height: "400px",
+                    objectFit: "cover",
+                    borderRadius: "10px",
+                    marginBottom: "20px",
+                  }}
+                />
+              </div>
+            </div>
           </div>
-          <div className="col-md-6">
-            <img
-              src={iphone}
-              alt="IPhone"
+          <a
+            className="carousel-control-next "
+            href="#imageCarousel"
+            role="button"
+            data-slide="next">
+            <span
               style={{
-                width: "100%",
-                height: "300px",
                 objectFit: "cover",
-                borderRadius: "10px",
+                borderRadius: "5px",
                 marginBottom: "20px",
+
+                height: "100px",
               }}
-            />
-          </div>
-          <div className="col-md-6">
-            <img
-              src={fruits}
-              alt="Fruits"
-              style={{
-                width: "100%",
-                height: "300px",
-                objectFit: "cover",
-                borderRadius: "10px",
-                marginBottom: "20px",
-              }}
-            />
-          </div>
-          <div className="col-md-6">
-            <img
-              src={computer}
-              alt="Computer"
-              style={{
-                width: "100%",
-                height: "300px",
-                objectFit: "cover",
-                borderRadius: "10px",
-                marginBottom: "20px",
-              }}
-            />
-          </div>
+              className="carousel-control-next-icon bg-primary p-4"
+              aria-hidden="true"></span>
+            <span className="sr-only">Next</span>
+          </a>
         </div>
 
         <button
