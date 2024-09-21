@@ -33,17 +33,12 @@ export function About() {
         style={{
           background: "linear-gradient( to right,palegreen, pink )",
           border: "1.5px solid gold",
-        }}
-      >
-        <div className="d-flex flex-row  ">
-          <button onClick={onIncrement} className="  btn btn-primary  p-2 m-4 ">
-            Increment
-          </button>
-          <h2> count:{count}</h2>
-          <button onClick={onDecrement} className="btn  btn-danger p-1 m-4">
-            Dcrement{" "}
-          </button>
-        </div>
+        }}>
+        <h2>
+          Developed using React,TypeScript, Tailwind CSS,this project involved
+          recreating Ecommerce landing page with a focus on responsive design
+          and modern web practices
+        </h2>
 
         <div className="ms-auto fw-bold fs-5">{cartChart}</div>
       </div>

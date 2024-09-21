@@ -3,7 +3,8 @@ import iphone from "../assets/IPhone.png";
 import car from "../assets/TATACar.png";
 import fruits from "../assets/Fruits.png";
 import computer from "../assets/Computer.png";
-
+import { NavLink } from "react-router-dom";
+import Nav from "react-bootstrap/esm/Nav";
 export function Home() {
   const { closeCart, openCart } = useShoppingCart();
 
@@ -17,7 +18,7 @@ export function Home() {
           textAlign: "center",
         }}>
         <span className="p-2">
-          <h1 className="text-black p-4">Welcome to Our Shop!</h1>
+          <h1 className="text-black p-4">Welcome to Buy Me</h1>
           <p>Find the best products at unbeatable prices!</p>
         </span>
         <div className="row wrap">
@@ -120,7 +121,12 @@ export function Home() {
           className="btn btn-primary"
           onClick={openCart}
           style={{ margin: "10px" }}>
-          Start Shopping
+          Open Cart
+        </button>
+        <button className="btn btn-primary">
+          <Nav.Link to="/store" as={NavLink}>
+            Store
+          </Nav.Link>
         </button>
         <button
           className="btn btn-secondary"
