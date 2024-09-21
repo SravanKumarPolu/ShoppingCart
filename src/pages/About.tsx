@@ -36,9 +36,9 @@ export function About() {
           background: "linear-gradient( to right,palegreen, pink )",
           border: "1.5px solid gold",
         }}>
-        <h1>Note:-</h1>
-        <h2 className=" p-4 m-4">
-          Developed using React,TypeScript, Tailwind CSS,this project involved
+        <h1 className=" p-2">Note:-</h1>
+        <h2 className=" px-4 m-4">
+          Developed using React,TypeScript, BootStrap CSS,this project involved
           recreating Ecommerce landing page with a focus on responsive design
           and modern web practices
         </h2>
