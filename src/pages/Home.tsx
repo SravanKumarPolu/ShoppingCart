@@ -123,16 +123,17 @@ export function Home() {
           style={{ margin: "10px" }}>
           Open Cart
         </button>
-        <button className="btn btn-primary">
-          <Nav.Link to="/store" as={NavLink}>
-            Store
-          </Nav.Link>
-        </button>
+
         <button
           className="btn btn-secondary"
           onClick={closeCart}
           style={{ margin: "10px" }}>
           Close Cart
+        </button>
+        <button className="btn btn-primary" style={{ margin: "10px" }}>
+          <Nav.Link to="/store" as={NavLink}>
+            Open Store
+          </Nav.Link>
         </button>
       </div>
     </>
